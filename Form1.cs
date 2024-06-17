@@ -72,5 +72,13 @@ namespace NIko_Arar_3_C_projekt
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            Registracija novaforma = new Registracija();
+            novaforma.Show();
+
+        }
     }
 }
