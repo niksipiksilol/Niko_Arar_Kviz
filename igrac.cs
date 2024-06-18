@@ -1,6 +1,6 @@
 ﻿namespace NIko_Arar_3_C_projekt
 {
-    internal class igrac
+    public class igrac
     {
 
 

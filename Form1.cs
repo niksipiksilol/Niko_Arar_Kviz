@@ -16,9 +16,7 @@ namespace NIko_Arar_3_C_projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            baza_pristup a = new baza_pristup();
-            List<bool> prijava = a.bazapristupkorisnici(ime_upis.Text, sifra_textbox.Text);
+            List<bool> prijava = baza_pristup.bazapristupkorisnici(ime_upis.Text, sifra_textbox.Text);
             if (prijava[1])
             {
                 if (prijava[0])

@@ -75,6 +75,9 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="kviz_podatciDataSet.cs">
+      <DependentUpon>kviz_podatciDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="kviz_podatciDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

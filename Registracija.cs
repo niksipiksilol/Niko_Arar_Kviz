@@ -24,11 +24,9 @@ namespace NIko_Arar_3_C_projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            baza_pristup a = new baza_pristup();
             
            
-            a.upisi_u_tablicu( "korisnici", "("+ "'" + textBox1.Text + "'" + "," + "'" + textBox2.Text + "'" + "," + "false" + "," +  " 0,0,0)");
+            baza_pristup.upisi_u_tablicu( "korisnici ([ime],[sifra],[Admin],[Geografija],[Opće znanje],[Videoigrice]) ", "("+ "'" + textBox1.Text + "'" + "," + "'" + textBox2.Text + "'" + "," + "false" + "," +  " 0,0,0)");
             this.Close();
 
         }
