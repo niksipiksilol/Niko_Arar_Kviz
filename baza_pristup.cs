@@ -10,7 +10,7 @@ namespace NIko_Arar_3_C_projekt
 
     internal class baza_pristup
     {
-        string poveznica = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=C:\Users\Frane\source\repos\NIko_Arar_3_C_projekt_v1\kviz_podatci.mdb";
+        string poveznica = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=C:..\\..\\kviz_podatci.mdb";
 
 
 
