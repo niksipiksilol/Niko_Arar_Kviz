@@ -58,8 +58,7 @@ namespace NIko_Arar_3_C_projekt
             {
 
 
-                baza_pristup a = new baza_pristup();
-                a.upisi_u_tablicu("kvizovi ([Pitanje], [Odgovor1], [Odgovor2], [Odgovor3], [Odgovor4], Tocan_odgovor, [Ime_kviza])", "('" + pitanje.Text + "', '" + odg1.Text + "', '" + odg2.Text + "', '" + odg3.Text + "', '" + odg4.Text + "', " + broj_odgovora.Text + ", '" + izbor_kategorije.Text + "')");
+                baza_pristup.upisi_u_tablicu("kvizovi ([Pitanje], [Odgovor1], [Odgovor2], [Odgovor3], [Odgovor4], Tocan_odgovor, [Ime_kviza])", "('" + pitanje.Text + "', '" + odg1.Text + "', '" + odg2.Text + "', '" + odg3.Text + "', '" + odg4.Text + "', " + broj_odgovora.Text + ", '" + izbor_kategorije.Text + "')");
                 pitanje.Text = "";
                 odg1.Text = "";
                 odg2.Text = "";

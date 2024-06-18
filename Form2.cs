@@ -35,13 +35,13 @@ namespace NIko_Arar_3_C_projekt
         private void izborkvizova_SelectedIndexChanged(object sender, System.EventArgs e)
         {
 
-            baza_pristup a = new baza_pristup();
             List<igrac> prva3 = new List<igrac>();
-            prva3 = a.top_3_igraca(izborkvizova.Text);
-            prva3.OrderBy( x => x.bodovi);
-            prvi.Text = prva3[2].name + " " + prva3[2].bodovi.ToString();
+            prva3 = baza_pristup.top_3_igraca(izborkvizova.Text);
+            prva3 = prva3.OrderBy( x => x.bodovi).ToList();
+            prva3.Reverse();
+            prvi.Text = prva3[0].name + " " + prva3[0].bodovi.ToString();
             drugi.Text = prva3[1].name + " " + prva3[1].bodovi.ToString();
-            treci.Text = prva3[0].name + " " + prva3[0].bodovi.ToString();
+            treci.Text = prva3[2].name + " " + prva3[2].bodovi.ToString();
             
 
 

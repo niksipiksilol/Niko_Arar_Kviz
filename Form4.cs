@@ -23,8 +23,7 @@ namespace NIko_Arar_3_C_projekt
             this.igrac = igrac;
             this.kategorija = kategorija;
             List<zadatak> kviz = new List<zadatak> { };
-            baza_pristup podaci = new baza_pristup();
-            kviz = podaci.jedan_kviz( kategorija );
+            kviz = baza_pristup.jedan_kviz( kategorija );
             zadataks = kviz;
             pitanje.Text = zadataks[broj_pitanja].pitanje;
             button1.Text = zadataks[broj_pitanja].odgovori[0];
@@ -61,9 +60,10 @@ namespace NIko_Arar_3_C_projekt
             else
             {
 
-                baza_pristup a = new baza_pristup();
-                int ID = a.IDigraca( igrac );
-                a.azuriaj_podataak(this.kategorija, ID, broj_bodova, "korisnici");
+                int ID = baza_pristup.IDigraca( igrac );
+                Console.WriteLine( ID );
+                Console.WriteLine( this.kategorija + ID.ToString() + broj_bodova.ToString() );
+                baza_pristup.azuriaj_podataak(this.kategorija, ID, broj_bodova, "korisnici");
                 this.Hide();
                 korisnik newform = new korisnik(igrac);
                 newform.ShowDialog();

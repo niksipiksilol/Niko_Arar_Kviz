@@ -8,14 +8,14 @@ using System.Windows.Forms;
 namespace NIko_Arar_3_C_projekt
 {
 
-    internal class baza_pristup
+    public static class baza_pristup
     {
-        string poveznica = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=C:..\\..\\kviz_podatci.mdb";
+        public static string poveznica = @"Provider=Microsoft.JET.OLEDB.4.0;Data Source=C:..\\..\\kviz_podatci.mdb";
 
 
 
 
-        public void upisi_u_tablicu(string tablica, string unos)
+        public static void upisi_u_tablicu(string tablica, string unos)
         {
 
             OleDbConnection konekcija;
@@ -40,7 +40,7 @@ namespace NIko_Arar_3_C_projekt
 
         }
 
-        public OleDbDataReader citac(string komanda)
+        public static OleDbDataReader citac(string komanda)
         {
 
             OleDbConnection konekcija;
@@ -55,7 +55,7 @@ namespace NIko_Arar_3_C_projekt
         }
 
 
-        public List<igrac> top_3_igraca( string kategorija)
+        public static List<igrac> top_3_igraca( string kategorija)
         {
             string ime;
             int rezultat;
@@ -82,7 +82,7 @@ namespace NIko_Arar_3_C_projekt
 
         } 
 
-        public int IDigraca( string ime )
+        public static int IDigraca( string ime )
         {
             int ID = 0;
 
@@ -101,7 +101,7 @@ namespace NIko_Arar_3_C_projekt
         }
 
 
-        public void azuriaj_podataak( string kategorija, int ID, int bodovi, string tablica )
+        public static void azuriaj_podataak( string kategorija, int ID, int bodovi, string tablica )
         {
 
 
@@ -128,7 +128,7 @@ namespace NIko_Arar_3_C_projekt
 
         }
 
-        public List<zadatak> jedan_kviz( string kategorija ) 
+        public static List<zadatak> jedan_kviz( string kategorija ) 
         {
             zadatak p;
             string pitanj;
@@ -155,7 +155,7 @@ namespace NIko_Arar_3_C_projekt
         }
 
 
-        public List<bool> bazapristupkorisnici(string ime, string sifra)
+        public static List<bool> bazapristupkorisnici(string ime, string sifra)
         {
             bool postoji = false;
             List<bool> bools = new List<bool>();

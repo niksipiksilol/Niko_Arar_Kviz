@@ -2,7 +2,7 @@
 
 namespace NIko_Arar_3_C_projekt
 {
-    internal class zadatak
+    public class zadatak
     {
 
         public string pitanje { get; set; }
