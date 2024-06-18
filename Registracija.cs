@@ -26,7 +26,7 @@ namespace NIko_Arar_3_C_projekt
         {
             
            
-            baza_pristup.upisi_u_tablicu( "korisnici ([ime],[sifra],[Admin],[Geografija],[Opće znanje],[Videoigrice]) ", "("+ "'" + textBox1.Text + "'" + "," + "'" + textBox2.Text + "'" + "," + "false" + "," +  " 0,0,0)");
+            baza_pristup.upisi_u_tablicu( "korisnici ([ime],[sifra],[Admin],[Geografija],[Opće],[Videoigrice]) ", "("+ "'" + textBox1.Text + "'" + "," + "'" + textBox2.Text + "'" + "," + "false" + "," +  " 0,0,0)");
             this.Close();
 
         }

@@ -8,7 +8,7 @@ namespace NIko_Arar_3_C_projekt
     {
 
         public string korisnikovo_ime { get; set; }
-        public List<string> kategorijelista = new List<string>() { "Geografija", "Opće znanje", "Videoigrice" };
+        public List<string> kategorijelista = new List<string>() { "Geografija", "Opće", "Videoigrice" };
 
         public admin(string korisnikovo_ime)
         {
