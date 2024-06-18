@@ -60,7 +60,7 @@ namespace NIko_Arar_3_C_projekt
             string ime;
             int rezultat;
 
-            List<string> list = new List<string>() { "Geografija", "Opće znanje", "Videoigrice" };
+            List<string> list = new List<string>() { "Geografija", "Opće", "Videoigrice" };
             int index = list.IndexOf(kategorija);
             index = index + 4;
 
@@ -107,6 +107,7 @@ namespace NIko_Arar_3_C_projekt
 
             OleDbConnection konekcija;
             konekcija = new OleDbConnection(poveznica);
+            string naredba  = "UPDATE " + tablica + " SET " + kategorija + " ='" + bodovi + "' WHERE ID=" + ID;
             OleDbCommand komadna = new OleDbCommand("UPDATE " + tablica + " SET " + kategorija+ " ='" + bodovi + "' WHERE ID="+ID);
             komadna.Connection = konekcija;
             try
@@ -154,6 +155,20 @@ namespace NIko_Arar_3_C_projekt
             return zad;
         }
 
+    
+
+        public static void Shuffle<T>(this IList<T> list, Random rng)
+        {
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+        }
 
         public static List<bool> bazapristupkorisnici(string ime, string sifra)
         {

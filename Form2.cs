@@ -7,7 +7,7 @@ namespace NIko_Arar_3_C_projekt
 {
     public partial class korisnik : Form
     {
-        public List<string> kategorijelista = new List<string>() { "Geografija", "Opće znanje", "Videoigrice" };
+        public List<string> kategorijelista = new List<string>() { "Geografija", "Opće", "Videoigrice" };
         public string korisnikovo_ime { get; set; }
         public korisnik(string korisnikovo_ime)
         {
